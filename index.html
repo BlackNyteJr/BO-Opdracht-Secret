@@ -6,32 +6,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Allura&family=Rouge+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" ></script>
+    <link rel="stylesheet" href="main/css/style.css">
+    <script src="main/js/main.js" ></script>
     <title>Mainscreen</title>
 </head>
 <header>
     <div class="container">
         <h1 class="title">Wild & Free</h1>
+        <div class="bottom-line"></div>
     </div>
-    <div class="bottom-line"></div>
 </header>
 <body>
     <div class="b_container">
-        <button class="button button1">Louella's Clothing</button>
-        <button class="button button2">Casey' Accessories</button>
-        <button class="button button3">Damyan's Shoes</button>
+        <a href="Louella/index.html">
+            <button class="button button1">Louella's Clothing</button>
+        </a>
+        <a href="Casey/index.html">
+            <button class="button button2">Casey' Accessories</button>
+        </a>
+        <a href="Damyan/index.html">
+            <button class="button button3">Damyan's Shoes</button>
+        </a>
     </div>
     <div class="c_container">
         <div class="newdeal">
-            <img class="newdeal_img" src="img/bracelet.webp" alt="">
+            <img class="newdeal_img" src="main/img/bracelet.webp" alt="">
             <div class="newdeal_text">
                 <h2>New Deal</h2>
                 <p>Sign up and get 20% off your first purchase!</p> 
                 <p class="code">Use code: <strong>'WILD&FREE20'</strong> by checkout</p>
                 <div class="login_buttons">
-                    <button class="b1 loginB">Log In</button>
-                    <button class="b1 signupB">Sign Up</button>
+                    <a href="login/login.html"><button class="b1 loginB">Log In</button></a>
+                    <a href="signup/signup.html"><button class="b1 signupB">Sign Up</button></a>
                 </div>
             </div>
         </div>
@@ -51,4 +57,23 @@
         </div>
     </div>
 </body>
+<footer>
+    <div class="footer">
+        <div class="footer-top">
+            <p>Follow us on social media:</p>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#"><img class="facebook" src="main/img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img class="instagram" src="main/img/instagram.png" alt="Instagram"></a>
+                <a href="#"><img class="twitter" src="main/img/twitter.png" alt="Twitter"></a>
+            </div>
+            <div>
+                <p class="rights">&copy; 2025 Wild & Free. All rights reserved.</p>
+                <p class="rights">Terms of Service | Privacy Policy</p>
+            </div>
+        </div>
+        
+    </div>
+</footer>
 </html>
