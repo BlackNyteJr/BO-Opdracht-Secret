@@ -50,6 +50,7 @@ header{
     cursor: pointer;
     font-style: normal;
     display: inline-block;
+    margin-left: 2rem;
 }
 
 .casey{
@@ -77,4 +78,60 @@ header{
     font-style: normal;
     line-height: 1.5;
     padding-left: 8rem;
+}
+
+.searchbar {
+    width: 40%;
+    padding: 1rem;
+    height: 2rem;
+    border-radius: 5rem;
+    background-color: #D0C2A8;
+    top: 16rem;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+    border: #613908 double 0.5rem;
+    color: black;
+    font-size: 1.8rem;
+}
+
+.a_container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-top: 20rem;
+    margin-left: 8rem;
+}
+
+.button-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    width: 20%;
+}
+
+.accessories{
+    color: #dacab2;
+}
+
+.divider {
+    width: 20%;
+    height: 0.2rem;
+    background-color: #bcce99;
+    border-radius: 4rem;
+}
+
+.button{
+    width: 25%;
+    height: 3rem;
+    color: #dacab2;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    background: none;
 }
