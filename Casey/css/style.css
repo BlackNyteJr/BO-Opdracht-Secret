@@ -95,7 +95,7 @@ header{
 .searchbar {
     width: 40%;
     padding: 1rem;
-    height: 2rem;
+    height: 3rem;
     border-radius: 5rem;
     background-color: #D0C2A8;
     top: 20rem;
@@ -112,7 +112,6 @@ header{
     display: grid;
     grid-column: 2/9;
     grid-row: 7/12;
-    background: red;
 }
 
 .button-container {
@@ -157,6 +156,74 @@ header{
     grid-row: 9/35;
     display: flex;
     flex-wrap: wrap;
-    background: blue;
     margin-right: 2rem;
+    gap: 2rem;
+}
+
+.card {
+    background: blue;
+    width: 30%;
+    height: 40%;
+    padding: 1rem;
+}
+
+.productimg {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 10rem;
+    width: 97.6%;
+    margin-top: 25rem;
+    padding: 2rem;
+    position: absolute;
+}
+
+.footer-top{
+    color: #cbd6b3;
+    font-size: 2rem;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.social-icons{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.facebook{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+}
+
+.instagram{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+}
+
+.twitter{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+}
+
+.rights{
+    color: #cbd6b3;
+    font-size: 2rem;
+    text-align: right;
 }
