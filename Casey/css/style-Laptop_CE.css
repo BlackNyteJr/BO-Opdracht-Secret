@@ -16,36 +16,29 @@ body {
     font-size: 3rem;
 }
 
-.dashboard {
-    display: grid;
-    grid-template-columns: repeat(24, 6rem);
-    grid-template-rows: repeat(36, 6rem);
+header{
+    height: 10rem;
 }
 
 .container{
-    display: flex;
-}
-
-header{
-    background-image: linear-gradient(180deg, #212a12, #80694c);
-    height: 14rem;
     width: 100%;
+    margin: 0 auto;
+    background-image: linear-gradient(180deg, #212a12, #80694c);
+    display: block;
     position: fixed;
-    z-index: 1000;
 }
 
 .header-links{
     display: flex;
-    flex-direction: row;
+    gap: 8rem;
     align-items: center;
-
 }
 
 .account {
-    width: 5rem;
-    right: 5rem;
+    width: 7rem;
+    right: 6rem;
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     user-select: none;
     cursor: pointer;
 }
@@ -57,11 +50,7 @@ header{
     cursor: pointer;
     font-style: normal;
     display: inline-block;
-    margin-left: 10rem;
-}
-
-.link:hover {
-    border-bottom: solid 0.15rem #bcce99;
+    margin-left: 2rem;
 }
 
 .casey{
@@ -91,28 +80,28 @@ header{
     padding-left: 8rem;
 }
 
-
 .searchbar {
     width: 40%;
     padding: 1rem;
     height: 2rem;
     border-radius: 5rem;
     background-color: #D0C2A8;
-    top: 20rem;
+    top: 16rem;
     transform: translateX(-50%);
     position: absolute;
     left: 50%;
     border: #613908 double 0.5rem;
     color: black;
     font-size: 1.8rem;
-    display: grid;
 }
 
 .a_container {
-    display: grid;
-    grid-column: 2/9;
-    grid-row: 7/12;
-    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    margin-top: 20rem;
+    margin-left: 8rem;
 }
 
 .button-container {
@@ -147,16 +136,6 @@ header{
     background: none;
 }
 
-.button:hover {
-    border-bottom: solid 0.15rem #bcce99;
-}
-
-
-.cards {
-    grid-column: 8/26;
-    grid-row: 9/35;
-    display: flex;
-    flex-wrap: wrap;
-    background: blue;
-    margin-right: 2rem;
+.button:hover{
+    border-bottom: solid 0.2rem #dacab2;
 }
