@@ -1,0 +1,41 @@
+{
+    "Cards": [
+        {
+            "title": "Bracelet",
+            "price": 20.00,
+            "detail": "material: silver",
+            "image": "/main/img/bracelet.webp"
+        },
+        {
+            "title": "Bracelet",
+            "price": 20.00,
+            "detail": "material: silver",
+            "image": "/main/img/bracelet.webp"
+        },
+        {
+            "title": "Bracelet",
+            "price": 20.00,
+            "detail": "material: silver",
+            "image": "/main/img/bracelet.webp"
+        },
+        {
+            "title": "Bracelet",
+            "price": 20.00,
+            "detail": "material: silver",
+            "image": "/main/img/bracelet.webp"
+        },
+        {
+            "title": "Bracelet",
+            "price": 20.00,
+            "detail": "material: silver",
+            "image": "/main/img/bracelet.webp"
+        }, 
+        {
+            "title": "Bracelet",
+            "price": 20.00,
+            "detail": "material: silver",
+            "image": "/main/img/bracelet.webp"
+        }
+        
+    ]
+}
