@@ -1,0 +1,68 @@
+html {
+    font-family: "Rouge Script", cursive;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #3E482A;
+}
+
+.box1 {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgb(101, 110, 53);
+    color: #334721;
+    margin: auto;
+    flex-direction: column;
+    height: 30rem;
+    width: 50rem;
+    flex-wrap: wrap;
+
+}
+
+title {
+    background-color: #474421;
+    color: #757d48;
+    font-family: cursive;
+}
+
+.wild{
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rouge Script", cursive;
+    color: #473321;
+    font-size: 9rem;
+    
+}
+
+.grid {
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.square1 {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: "Rouge Script", cursive;
+    background-color: #334721;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 4px 10px olive;
+    width: 150px;
+    height: 150px;
+    gap: 20px;
+    border-radius: 15px;
+    
+}
