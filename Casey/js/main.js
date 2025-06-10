@@ -4,8 +4,8 @@ function AddCard(title, price, detail, image){
     article.innerHTML = 
             `<img class="productimg" src="${image}" alt="">
             <h1>${title}</h1>
-            <p>Price: $${price}</p>
-            <p>${detail}</p>`;
+            <p>Price: $${price},-</p>
+            <p class="detail">${detail}</p>`;
             article.className = "card";
     list.append(article);
     list.appendChild(article);

@@ -28,7 +28,7 @@ body {
 
 header{
     background-image: linear-gradient(180deg, #212a12, #80694c);
-    height: 14rem;
+    height: 14%;
     width: 100%;
     position: fixed;
     z-index: 1000;
@@ -44,10 +44,7 @@ header{
 .account {
     width: 5rem;
     right: 5rem;
-    position: absolute;
-    top: 3rem;
-    user-select: none;
-    cursor: pointer;
+    margin-left: 5rem;
 }
 
 .link{
@@ -98,7 +95,7 @@ header{
     height: 3rem;
     border-radius: 5rem;
     background-color: #D0C2A8;
-    top: 20rem;
+    top: 20%;
     transform: translateX(-50%);
     position: absolute;
     left: 50%;
@@ -163,17 +160,28 @@ header{
 .card {
     background: #a4937a;
     width: 30%;
+    height: 45%;
     padding: 1rem;
     margin-top: 1rem;
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -10px, rgba(0, 0, 0, 0.22) 0px 18px 36px -18px;
 }
 
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
 .productimg {
     width: 100%;
-    height: 75%;
-    object-fit: cover;
+    height: 70%;
+    object-fit: fill;
     border-radius: 1rem;
+}
+
+.detail{
+    font-size: 2rem;
+    font-weight: 100;
 }
 
 footer{
@@ -182,8 +190,7 @@ footer{
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.4);
     height: 10rem;
-    width: 97.6%;
-    margin-top: 25rem;
+    width: 100%;
     padding: 2rem;
     position: absolute;
 }
@@ -228,4 +235,187 @@ footer{
     color: #cbd6b3;
     font-size: 2rem;
     text-align: right;
+}
+
+@media (min-width: 901px) and (max-width: 1590px) {
+    .title {
+        font-size: 9rem; /* Adjust title size for smaller screens */
+    }
+
+    .link {
+        margin-left: 6rem;
+        font-size: 2.5rem; /* Adjust link size for smaller screens */
+    }
+
+    header{
+        height: 18rem;
+    }
+
+    footer{
+        width: 139rem;
+    }
+   
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    body {
+        font-size: 2.5rem;
+    }
+
+    .dashboard {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(18, 6rem);
+    }
+
+
+    .a_container {
+        grid-column: 2 / 8;
+        grid-row: 7 / 12;
+        width: 100%;
+    }
+
+    .button-container {
+        width: 50%;
+    }
+
+    .cards {
+        grid-column: 6 / 13;
+        grid-row: 9 / 35;
+        width: 100%;
+    }
+
+    .card {
+        width: 40%;
+        height: 40%;
+    }
+
+    header {
+        height: auto;
+        padding: 1rem;
+        position: absolute;
+        width: 100%;
+    }
+
+    .header-links {
+        justify-content: center;
+    }
+
+    .link {
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 5rem;
+        padding-left: 1rem;
+        text-align: center;
+    }
+
+    footer{
+        width: 100%;
+        position: absolute;
+        padding: 1rem;
+        height: 10%;
+        margin-top: 55%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 2rem; 
+    }
+
+    .dashboard {
+        display: block;
+    }
+
+    .searchbar {
+        width: 90%;  
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+        top: auto;
+        margin: 2rem auto;
+        font-size: 1.4rem;
+    }
+
+    .a_container {
+        grid-column: auto;
+        grid-row: auto;
+        width: 90%;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .button-container {
+        width: 100%;
+        margin-top: 1rem;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .button {
+        width: auto;
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .cards {
+        grid-column: auto;
+        grid-row: auto;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0;
+        gap: 1rem;
+        width: 90%;
+        margin: 2rem auto;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    header {
+        height: auto;
+        padding: 1rem;
+        position: relative;
+    }
+
+    .header-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .link {
+        margin-left: 1rem;
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 5rem;
+        padding-left: 1rem;
+        text-align: center;
+    }
+
+    footer {
+        width: 100%;
+        position: relative;
+        padding: 1rem;
+        height: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 }

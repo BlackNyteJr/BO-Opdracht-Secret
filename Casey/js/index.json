@@ -2,39 +2,39 @@
     "Cards": [
         {
             "title": "Bracelet",
-            "price": 20.00,
-            "detail": "material: silver",
+            "price": 5.00,
+            "detail": "Material: Bronze",
             "image": "/main/img/bracelet.webp"
         },
         {
-            "title": "Bracelet",
-            "price": 20.00,
-            "detail": "material: silver",
-            "image": "/main/img/bracelet.webp"
+            "title": "Bag",
+            "price": 25.00,
+            "detail": "Material: Cotton",
+            "image": "img/bag.jpg"
         },
         {
-            "title": "Bracelet",
-            "price": 20.00,
-            "detail": "material: silver",
-            "image": "/main/img/bracelet.webp"
+            "title": "Earrings",
+            "price": 3.00,
+            "detail": "Material: Bronze",
+            "image": "img/earrings.jpg"
         },
         {
-            "title": "Bracelet",
-            "price": 20.00,
-            "detail": "material: silver",
-            "image": "/main/img/bracelet.webp"
+            "title": "Necklace",
+            "price": 7.00,
+            "detail": "Material: Bronze",
+            "image": "img/necklace.jpg"
         },
         {
-            "title": "Bracelet",
-            "price": 20.00,
-            "detail": "material: silver",
-            "image": "/main/img/bracelet.webp"
+            "title": "Rings",
+            "price": 10.00,
+            "detail": "Material: Silver/Gold",
+            "image": "img/rings.jpg"
         }, 
         {
-            "title": "Bracelet",
+            "title": "Watch",
             "price": 20.00,
-            "detail": "material: silver",
-            "image": "/main/img/bracelet.webp"
+            "detail": "Material: Wood/Silver",
+            "image": "img/watch.jpg"
         }
         
     ]
