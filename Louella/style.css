@@ -1,68 +1,112 @@
 html {
-    font-family: "Rouge Script", cursive;
+    font-family: "Rouge Script";
     font-size: 62.5%;
 }
 
 body {
     background-color: #3E482A;
-}
-
-.box1 {
-
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 2rem;
-    background-color: rgb(101, 110, 53);
-    color: #334721;
+}
+
+h2 {
+
+    color: #bcce99;
+    font-family: "Rouge Script";
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.button1 {
+    display: flex;
+    border: none;
     margin: auto;
-    flex-direction: column;
-    height: 30rem;
-    width: 50rem;
-    flex-wrap: wrap;
-
+    height: 50px;
+    text-align: center;
+    font-family: "Allura";
+    font-size: 3rem;
+    color: #c4d3a5;
+    background: none; position: relative;
+    padding: 5px;
+    font-style: normal;
+    cursor: pointer;
 }
 
-title {
-    background-color: #474421;
-    color: #757d48;
-    font-family: cursive;
+.button {
+    display: flex;
+    border: none;
+    margin: auto;
+    align-items: center;
+    text-align: justify;
+    font-family: "Allura";
+    font-size: 3rem;
+    color: #c4d3a5;
+    background: none;
+    position: relative;
+    height: 50px;
+    padding: 5px;
+    font-style: normal;
+    cursor: pointer;
 }
-
 .wild{
-    padding: 10px;
-    margin: 10px;
+    padding: 5px;
+    margin-top: -10px;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    font-family: "Rouge Script", cursive;
-    color: #473321;
+    position: relative;
+    font-family: "Rouge Script";
+    font-weight: 400;
+    background: linear-gradient(to right, #778858, #c4d3a5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 9rem;
     
 }
 
+.wild::after {
+
+    content: "";
+    display: block;
+    width: 95%;
+    height: 0.5rem;
+    background-color: #bcce99;
+    margin: 10px auto 0;
+    border-radius: 1rem;
+
+}
+ .container {
+   background-image: linear-gradient(180deg, #212a12, #3E482A);
+ }
 .grid {
    
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    padding: 0;
+    margin: 5rem;
+    gap: 25px;
 }
 
-.square1 {
+.square {
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
-    font-family: "Rouge Script", cursive;
-    background-color: #334721;
+    font-family: "Rouge Script";
+    font-size: 3rem;
+    background-color: #8a7957;
     display: flex;
     flex-direction: column;
-    box-shadow: 2px 4px 10px olive;
-    width: 150px;
-    height: 150px;
+    border: #613908 double 1rem;
+    box-shadow: 2px 4px 10px black;
+    width: 200px;
+    height: 320px;
     gap: 20px;
     border-radius: 15px;
     
 }
+
