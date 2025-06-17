@@ -42,6 +42,10 @@ header{
     display: inline-block;
 }
 
+.link:hover {
+    border-bottom: solid 0.15rem #bcce99;
+}
+
 .damyan{
     font-weight: 600;
 }
@@ -67,4 +71,117 @@ header{
     font-style: normal;
     line-height: 1.5;
     padding-left: 8rem;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+.item {
+    background-color: #c4d3a5;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.item-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.item-title {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.item-price {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.add-to-cart {
+    background-color: #3a6e43;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #2a4e33;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.detail{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 10rem;
+    width: 96.79vw;
+    padding: 2rem;
+    position: absolute;
+}
+
+.footer-top{
+    color: #cbd6b3;
+    font-size: 2rem;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: auto;
+}
+
+.social-icons{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.facebook{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+}
+
+.instagram{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+}
+
+.twitter{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+}
+
+.rights{
+    color: #cbd6b3;
+    font-size: 2rem;
+    text-align: right;
 }
