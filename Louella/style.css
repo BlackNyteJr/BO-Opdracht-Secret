@@ -1,12 +1,32 @@
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 html {
     font-family: "Rouge Script";
     font-size: 62.5%;
+}
+
+*{
+    
+    box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     background-color: #3E482A;
     display: flex;
     flex-direction: column;
+ 
+}
+
+.media-thing {
+   
+    background-color: #212a12;
+    width: 100%; /*100vw (100% of the viewport width)*/
+    margin: 6rem 0 0 0;
+    height: 15rem;
 }
 
 h2 {
@@ -14,7 +34,17 @@ h2 {
     color: #bcce99;
     font-family: "Rouge Script";
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 10rem;
+    margin: 3rem 3rem 0 3rem;
+}
+
+.another-line {
+    width: 25%;
+    margin: 0 3rem 6rem 3rem; /*margin: top 0 right 3rem bottom 3rem left 3rem;*/
+    height: 0.5rem;
+    background-color: #bcce99;
+    border-radius: 1rem;
+
 }
 
 .button1 {
@@ -48,52 +78,132 @@ h2 {
     font-style: normal;
     cursor: pointer;
 }
+
+.wrap-button {
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem auto;
+
+}
+
+.button1:focus{
+
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(61, 65, 51);
+}
+
+.button:focus{
+
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(49, 55, 36);
+}
+
+
 .wild{
     padding: 5px;
-    margin-top: -10px;
+    margin: 1rem;
     text-align: center;
     align-items: center;
     justify-content: center;
     position: relative;
     font-family: "Rouge Script";
     font-weight: 400;
+    display: inline-block;
     background: linear-gradient(to right, #778858, #c4d3a5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-size: 9rem;
+    z-index: 10000;
+}
+
+
+
+.bottom-line {
+    width: 95%;
+    margin: 0 auto;
+    height: 0.5rem;
+    background-color: #bcce99;
+    border-radius: 1rem;
+}
+
+
+
+.container{
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    background: linear-gradient(180deg, #212a12, #3E482A);
+    pointer-events: none;
+    z-index: 9999;
     
 }
 
-.wild::after {
+.list {
+
+    color: #bcce99;
+    font-size: 4rem;
+    font-family: "Allura";
+    margin: 2rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list li{
+    
+    position: relative;
+    margin: 1rem;
+    cursor: pointer;
+    transition: transform 0.3 ease;
+}
+
+.list li::after {
 
     content: "";
-    display: block;
-    width: 95%;
-    height: 0.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 21%;
+    height: 2px;
     background-color: #bcce99;
-    margin: 10px auto 0;
-    border-radius: 1rem;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform 0.3 ease;
+}
+
+.list li:hover {
+
+        transform: translateY(-5px);
 
 }
- .container {
-   background-image: linear-gradient(180deg, #212a12, #3E482A);
- }
-.grid {
-   
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 5rem;
-    gap: 25px;
+
+.list li:hover::after {
+
+    transform: scaleX(1);
+
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Exactly 3 per row */
+  gap: 20px; /* Adjust spacing between boxes */
+  width: 900px; /* Controls how wide the whole row can be */
+  padding: 20px;
+  margin-left: auto;
+  margin-right: 2rem;
+  justify-items: right;
+  justify-content: end;
+}
+
+
 
 .square {
-    align-items: center;
-    justify-content: center;
+    align-items: right;
+    justify-content: right;
     margin: 0;
     padding: 0;
     font-family: "Rouge Script";
@@ -103,10 +213,101 @@ h2 {
     flex-direction: column;
     border: #613908 double 1rem;
     box-shadow: 2px 4px 10px black;
-    width: 200px;
-    height: 320px;
-    gap: 20px;
+    width: 350px;
+    height: 600px;
+    overflow: hidden;
     border-radius: 15px;
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.square:hover {
+
+    transform: scale(1.05);
+    box-shadow: 4px 8px 16px black;
+
+}
+
+.square img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 15px;
+  display: block;
+
+}
+
+.card {
+  background-color: #8a7957;
+  border: 3px double #613908;
+  border-radius: 15px;
+  box-shadow: 2px 4px 10px black;
+  padding: 20px;
+  margin: 1rem;
+  min-height: 150px;
+  color: #c4d3a5;
+  font-family: "Rouge Script";
+  font-size: 2.4rem;
+  width: 300px;
+  object-fit: contain;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2rem;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.socials {
+
+    align-items: left;
+    justify-content: left;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+    margin: 2px;
+    padding: 2px;
+}
+/*
+.copyright {
+  width: 100%;
+  max-width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2rem;
+  color: #bcce99;
+  padding: 1rem 2rem;
+  text-align: right;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+} */
+
+.footer {
+  width: 100%;
+  max-width: 100vw;
+  background-color: #212a12;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.footer-top {
+    margin: 1rem;
+    justify-content: left;
+    align-items: left;
+    font-size: 3rem;
+    color: #bcce99;
+}
+
+.text1 {
+
+    padding: 2rem;
+    font-size: 3rem;
+    margin: 0 auto;
 }
 

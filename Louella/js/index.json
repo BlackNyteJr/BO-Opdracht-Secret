@@ -1,0 +1,49 @@
+{
+    "cards": [
+        {
+            "title": "brown sweater",
+            "price": 15,
+            "details": "cotton"
+        },
+        {
+            "title": "brown vest",
+            "price": 13,
+            "details": "polyester"
+        },
+        {
+            "title": "hippie pants",
+            "price": 21,
+            "details": "polyester"
+        },
+        {
+            "title": "cargo pants",
+            "price": 17,
+            "details": "denim"
+        },
+        {
+            "title": "hippie pants",
+            "price": 23,
+            "details": "cotton"
+        },
+        {
+            "title": "green sweater",
+            "price": 18,
+            "details": "wool"
+        },
+        {
+            "title": "brown jacket",
+            "price": 29,
+            "details": "denim"
+        },
+        {
+            "title": "blue shirt",
+            "price": 11,
+            "details": "polyester"
+        },
+        {
+            "title": "blue jacket",
+            "price": 22,
+            "details": "polyester"
+        }
+    ]
+}
