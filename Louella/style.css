@@ -22,13 +22,16 @@ body {
 }
 
 .media-thing {
-   
-    background-color: #212a12;
-    width: 100%; /*100vw (100% of the viewport width)*/
-    margin: 6rem 0 0 0;
-    height: 15rem;
+  background-color: #212a12;
+  width: 100%;
+  height: 15rem;
+  margin-top: 6rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
 }
-
 h2 {
 
     color: #bcce99;
@@ -270,30 +273,24 @@ h2 {
     margin: 2px;
     padding: 2px;
 }
-/*
-.copyright {
-  width: 100%;
-  max-width: 100vw;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: 2rem;
-  color: #bcce99;
-  padding: 1rem 2rem;
-  text-align: right;
-  box-sizing: border-box;
-  white-space: nowrap;
-  overflow: hidden;
-} */
 
-.footer {
-  width: 100%;
-  max-width: 100vw;
-  background-color: #212a12;
-  overflow: hidden;
+
+
+
+.footer-text {
+  position: absolute; /* position absolutely inside media-thing */
+  bottom: 1rem;       /* erm distance from bottom of media-thing */
+  right: 2rem;        /* distance from right edge cause ye */
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin-bottom: 1rem;    
+  font-size: 3rem;
+  color: #bcce99;
+  width: auto;
 }
+
 
 
 .footer-top {
