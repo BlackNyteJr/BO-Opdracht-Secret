@@ -96,8 +96,8 @@ header{
 
 .item-image {
     width: 100%;
-    height: auto;
-    border-radius: 1rem 1rem 0 0;
+    height: 100%;
+    border-radius: 1rem;
 }
 
 .item-title {
