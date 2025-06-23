@@ -23,7 +23,7 @@ header{
     width: 100%;
     margin: 0 auto;
     display: block;
-    position: fixed;
+    position: relative;
     background-image: linear-gradient(180deg, #212a12, #3a6e43);
 }
 
@@ -78,6 +78,7 @@ header{
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
     padding: 4rem 2rem;
+    margin-top: 10rem; /* Add margin equal to the height of the header */
 }
 
 .item {
