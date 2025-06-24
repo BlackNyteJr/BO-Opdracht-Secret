@@ -3,9 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <title>Login - Wild & Free</title>
 </head>
 <body>
-    
+
+<div class="login-container">
+    <h2>Log In</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <a href="/index.html"><button type="button">Login</button></a>
+    </form>
+    <p class="message" id="message"></p>
+</div>
+
+<script src="main.js"></script>
 </body>
 </html>
