@@ -41,6 +41,26 @@ h2 {
     margin: 3rem 3rem 0 3rem;
 }
 
+.searchbar {
+    width: 25%;
+    margin: 3rem 3rem 0 3rem;
+    height: 4rem;
+    justify-content: space-between;
+    background-color: #bcce99;
+    border-radius: 1rem;
+    border: double 0.5rem #613908;
+
+}
+
+.search-and-clothes-thing {
+
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 4rem 5rem;
+}
+
+
 .another-line {
     width: 25%;
     margin: 0 3rem 6rem 3rem; /*margin: top 0 right 3rem bottom 3rem left 3rem;*/
@@ -58,11 +78,13 @@ h2 {
     text-align: center;
     font-family: "Allura";
     font-size: 3rem;
+    font-weight: bold;
     color: #c4d3a5;
     background: none; position: relative;
     padding: 5px;
     font-style: normal;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .button {
@@ -80,6 +102,42 @@ h2 {
     padding: 5px;
     font-style: normal;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.button1 span, .button span {
+
+    position: relative;
+    display: inline-block;
+
+}
+
+.button1 span::after, .button span::after {
+
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 21%;
+    height: 2px;
+    background-color: #bcce99;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+
+}
+
+.button1:hover span::after, .button:hover span::after {
+
+    transform: scaleX(1);
+
+}
+
+.button1:hover span, .button:hover span {
+
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+
 }
 
 .wrap-button {
@@ -102,6 +160,7 @@ h2 {
     outline: none;
     box-shadow: 0 0 0 3px rgb(49, 55, 36);
 }
+
 
 
 .wild{
@@ -146,12 +205,21 @@ h2 {
     
 }
 
-.list {
+.list-and-grid-thing {
+ 
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    padding: 2rem 3rem;
 
+}
+
+.list {
+    flex: 0 0 200px;
     color: #bcce99;
     font-size: 4rem;
     font-family: "Allura";
-    margin: 2rem;
+    margin: 1rem;
     list-style-type: none;
     padding-left: 0;
 }
@@ -159,6 +227,7 @@ h2 {
 .list li{
     
     position: relative;
+    display: inline-block;
     margin: 1rem;
     cursor: pointer;
     transition: transform 0.3 ease;
@@ -180,21 +249,23 @@ h2 {
 
 .list li:hover {
 
-        transform: translateY(-5px);
+        transform: translateX(-5px);
 
 }
 
 .list li:hover::after {
 
-    transform: scaleX(1);
+    transform: scaleY(1);
+    transition: transform 0.3s ease;
 
 }
 
 .grid {
+  flex: 1;  
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Exactly 3 per row */
   gap: 20px; /* Adjust spacing between boxes */
-  width: 900px; /* Controls how wide the whole row can be */
+  width: auto;
   padding: 20px;
   margin-left: auto;
   margin-right: 2rem;
