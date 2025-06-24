@@ -13,7 +13,9 @@ function Card(name, price, image) {
 async function fetchItems() {
   const response = await fetch('js/info.json');
   const data = await response.json();
-  data.Items.sort((a, b) => a.price - b.price); // Sort items by price
+  // how to sort items vvv
+  data.Items.sort((a, b) => a.price - b.price);
+   // Sort items by price ^^^
   let prod = data.Items
   prod.forEach(prod => {
     Card(prod.name, prod.price, prod.image);
