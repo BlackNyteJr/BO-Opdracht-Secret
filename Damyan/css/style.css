@@ -44,6 +44,7 @@ header{
 
 .link:hover {
     border-bottom: solid 0.15rem #bcce99;
+    transition: border-bottom 0.3s ease;
 }
 
 .damyan{
