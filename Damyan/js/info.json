@@ -1,24 +1,20 @@
-{
-    "Items": [
-        {
-            "name": "Shoe 1",
-            "price": 89.99,
-            "image": "img/picture1.png"
-        },
-        {
-            "name": "Shoe 2",
-            "price": 79.99,
-            "image": "img/picture2.png"
-        },
-        {
-            "name": "Shoe 3",
-            "price": 99.99,
-            "image": "img/picture3.png"
-        },
-        {
-            "name": "Shoe 4",
-            "price": 69.99,
-            "image": "img/picture4.png"
-        }
-    ]
-}
+[
+  {
+    "title": "Shoe 1",
+    "price": 89.99,
+    "image": "img/picture1.png",
+    "alt": "Damyan's Shoes"
+  },
+  {
+    "title": "Shoe 2",
+    "price": 89.99,
+    "image": "img/picture2.png",
+    "alt": "Damyan's Shoes"
+  },
+  {
+    "title": "Shoe 3",
+    "price": 89.99,
+    "image": "img/picture3.png",
+    "alt": "Damyan's Shoes"
+  }
+]
