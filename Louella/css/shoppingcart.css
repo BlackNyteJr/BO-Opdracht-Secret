@@ -1,9 +1,12 @@
 
 html, body {
+  height: 100%;  
   max-width: 100vw;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 html {
@@ -15,7 +18,9 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
+ .main-content {
+    flex: 1;
+ }
 
 header {
   position: fixed;
@@ -38,7 +43,7 @@ body {
   padding-top: 10rem; 
 }
 
-/* Heading */
+
 h2 {
   color: #bcce99;
   font-family: "Rouge Script";
@@ -47,11 +52,10 @@ h2 {
   margin: 3rem 3rem 0 3rem;
 }
 
-/* Media/Footer Section */
+
 .media-thing {
   background-color: #212a12;
   width: 100%;
-  height: 15rem;
   margin-top: 6rem;
   padding: 2rem;
   display: flex;
@@ -60,7 +64,7 @@ h2 {
   position: relative;
 }
 
-/* Footer Text */
+
 .footer-text {
   position: absolute;
   bottom: 1rem;
@@ -205,121 +209,6 @@ h2 {
 
 .container {
   display: flex;
-}
-
-.list-and-grid-thing {
-  display: flex;
-  gap: 4rem;
-  align-items: flex-start;
-  padding: 2rem 3rem;
-}
-
-/* Product List */
-.list {
-  flex: 0 0 200px;
-  color: #bcce99;
-  font-size: 4rem;
-  font-family: "Allura";
-  margin: 1rem;
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.list li {
-  position: relative;
-  display: inline-block;
-  margin: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.list li::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 21%;
-  height: 2px;
-  background-color: #bcce99;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.list li:hover {
-  transform: translateX(-5px);
-}
-
-.list li:hover::after {
-  transform: scaleX(1);
-}
-
-/* Product Grid */
-.grid {
-  flex: 1;  
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: auto;
-  padding: 20px;
-  margin-left: auto;
-  margin-right: 2rem;
-  justify-items: right;
-  justify-content: end;
-}
-
-/* Individual Product Card */
-.square {
-  font-family: "Rouge Script";
-  font-size: 3rem;
-  background-color: #8a7957;
-  display: flex;
-  flex-direction: column;
-  border: #613908 double 1rem;
-  box-shadow: 2px 4px 10px black;
-  width: 350px;
-  height: 600px;
-  overflow: hidden;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.square:hover {
-  transform: scale(1.05);
-  box-shadow: 4px 8px 16px black;
-}
-
-.square img {
-  width: 100%;
-  height: 400px;
-  object-fit: contain;
-  border-radius: 15px;
-  display: block;
-}
-
-/* Simple Card (for other info?) */
-.card {
-  background-color: #8a7957;
-  border: 3px double #613908;
-  border-radius: 15px;
-  box-shadow: 2px 4px 10px black;
-  padding: 20px;
-  margin: 1rem;
-  min-height: 150px;
-  color: #c4d3a5;
-  font-family: "Rouge Script";
-  font-size: 2.4rem;
-  width: 300px;
-  object-fit: contain;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 2rem;
-  justify-content: center;
-  object-fit: contain;
 }
 
 /* Social Icons */
