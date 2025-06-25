@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Rouge+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="/Casey/js/main.js" defer></script>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ontdek stijlvolle accessoires en betaalbare sieraden voor elke gelegenheid. Perfecte mix van mode en prijs bij Wild & Free." />
+  <title>Accessories | Wild & Free</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Rouge+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <main class="dashboard">
     <header>
-    <div class="container">
-        <a href="\index.html"><h1 class="title">Wild & Free</h1></a>
+      <div class="container">
+        <a href="/webshop/wild-and-free/index.html"><h1 class="title">Wild & Free</h1></a>
         <div class="header-links">
-        <a href="/Louella/index.html"><h2 class="link louella">Louella's Clothing</h2></a>
-        <a href="/Casey/index.html"><h2 class="link casey">Casey's Accessories</h2></a>
-        <a href="/Damyan/index.html"><h2 class="link damyan">Damyan's Shoes</h2></a>
-        <svg class="account" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
+          <a href="/webshop/wild-and-free/Louella/index.html"><h2 class="link louella">Louella's Clothing</h2></a>
+          <a href="index.html"><h2 class="link casey">Casey's Accessories</h2></a>
+          <a href="/webshop/wild-and-free/Damyan/index.html"><h2 class="link damyan">Damyan's Shoes</h2></a>
+          <a href="login/login.html">
+            <div class="account-wrapper">
+              <svg class="account" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/>
+              </svg></div></a> 
+          <a href="cart.html" class="cart" aria-label="Shopping cart with 0 items" title="Shopping cart">
+            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            <div class="cart__badge" aria-live="polite" aria-atomic="true" id="cart-count">0</div>
+          </a>
         </div>
-    </div>
-    <div class="bottom-line"></div>
-</header>
+      </div>
+      <div class="bottom-line"></div>
+    </header>
+
     <div class="a_container">
-        <input class="searchbar" type="text" placeholder="Search.." name="search">
-        <h1 class="accessories">Accessories</h1>
-        <div class="divider"></div>
-    <div class="button-container">
-        <button class="button">Bags</button>
-        <button class="button">Bracelets</button>
-        <button class="button">Earrings</button>
-        <button class="button">Necklaces</button>
-        <button class="button">Rings</button>
-        <button class="button">Watches</button>
+      <div class="theme-switcher">
+        <label for="theme-toggle">Dark Mode</label>
+        <input type="checkbox" id="theme-toggle" />
+      </div>
+      <input id="search-bar" class="searchbar" type="text" placeholder="Search.." name="search" />
+      <h1 class="accessories">Accessories</h1>
+      <div class="button-container">
+        <button class="button button1">Bags</button>
+        <button class="button button2">Bracelets</button>
+        <button class="button button3">Earrings</button>
+        <button class="button button4">Necklaces</button>
+        <button class="button button5">Rings</button>
+        <button class="button button6">Watches</button>
+      </div>
     </div>
-    </div>
+
     <section id="cards--js" class="cards">
-        <!-- ... -->
+      <!-- Product cards inserted via JS -->
     </section>
   </main>
+
+  <div id="popup" class="popup">Item toegevoegd aan winkelwagen!</div>
+
+  <footer>
+    <div class="footer-top">
+      <p>Follow us on social media:</p>
+    </div>
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="#"><img class="facebook" src="/main/img/facebook.png" alt="Facebook" /></a>
+        <a href="#"><img class="instagram" src="/main/img/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img class="twitter" src="/main/img/twitter.png" alt="Twitter" /></a>
+      </div>
+      <div>
+        <p class="rights">&copy; 2025 Wild & Free. All rights reserved.</p>
+        <p class="rights">Terms of Service | Privacy Policy</p>
+        <p class="rights">Made by Casey</p>
+      </div>
+    </div>
+  </footer>
 </body>
-<footer>
-        <div class="footer-top">
-            <p>Follow us on social media:</p>
-        </div>
-        <div class="footer-bottom">
-            <div class="social-icons">
-                <a href="#"><img class="facebook" src="/main/img/Facebook.png" alt="Facebook"></a>
-                <a href="#"><img class="instagram" src="/main/img/Instagram.png" alt="Instagram"></a>
-                <a href="#"><img class="twitter" src="/main/img/Twitter.png" alt="Twitter"></a>
-            </div>
-            <div>
-                <p class="rights">&copy; 2025 Wild & Free. All rights reserved.</p>
-                <p class="rights">Terms of Service | Privacy Policy</p>
-                <p class="rights">Made by Casey</p>
-            </div>
-        </div>
-</footer>
 </html>
