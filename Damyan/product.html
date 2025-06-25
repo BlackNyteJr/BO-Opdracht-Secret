@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    img { width: 300px; }
+  </style>
+</head>
+<body>
+  <div id="product-container"></div>
+
+  <script>
+    const products = [
+      { id: 1, name: "Shoe 1", price: 89.99, description: "Comfortabele schoen voor elke dag", image: "img/picture1.png" },
+      { id: 2, name: "Shoe 2", price: 89.99, description: "Stijlvol en duurzaam", image: "img/picture2.png" },
+      { id: 3, name: "Shoe 3", price: 99.99, description: "Perfect voor sport en vrije tijd", image: "img/picture3.png" },
+      { id: 4, name: "Shoe 4", price: 89.99, description: "Elegante schoen voor speciale gelegenheden", image: "img/picture4.png" },
+      { id: 5, name: "Shoe 5", price: 89.99, description: "Lichte en ademende sneaker", image: "img/picture5.png" },
+      { id: 6, name: "Shoe 6", price: 89.99, description: "Robuuste schoen voor buitenactiviteiten", image: "img/picture6.png" },
+      { id: 7, name: "Shoe 7", price: 89.99, description: "Moderne sneaker met unieke stijl", image: "img/picture7.png" },
+      { id: 8, name: "Shoe 8", price: 89.99, description: "Comfortabele en trendy sneaker", image: "img/picture8.png" }
+    ];
+
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
+
+    const product = products.find(p => p.id === id);
+
+    const container = document.getElementById("product-container");
+
+    if (product) {
+      container.innerHTML = `
+        <h1>${product.name}</h1>
+        <img src="${product.image}" alt="${product.name}">
+        <p>Prijs: €${product.price.toFixed(2)}</p>
+        <p>${product.description}</p>
+        <button onclick="addToCart(${product.id})">Toevoegen aan winkelwagen</button>
+      `;
+    }
+
+    function addToCart(id) {
+    const item = products.find(p => p.id === id);
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existing = cart.find(i => i.id === item.id);
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({...item, quantity: 1, image: item.image}); // Include image in cart
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(`${item.name} toegevoegd aan winkelwagen!`);
+}
+  </script>
+</body>
+</html>

@@ -1,67 +1,41 @@
-function Card(name, price, image) {
-  let list = document.getElementById('list');
-  let div = document.createElement('article');
-  div.innerHTML = `
-      <img src="img/picture1.png" alt="Damyan's Shoes" class="item-image">
-            <h3 class="item-title">${name}</h3>
-            <p class="item-price">$${price}</p>
-            <button class="add-to-cart">Add to Cart</button>`;
-  list.append(div);
-  list.appendChild(div);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll(".add-to-cart");
 
-async function fetchItems() {
-  const response = await fetch('js/info.json');
-  const data = await response.json();
-  // how to sort items vvv
-  data.Items.sort((a, b) => a.price - b.price);
-   // Sort items by price ^^^
-  let prod = data.Items
-  prod.forEach(prod => {
-    Card(prod.name, prod.price, prod.image);
-  });
-}
+    buttons.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+            const product = {
+                id: index + 1,
+                name: `Shoe ${index + 1}`,
+                price: index === 4 ? 99.99 : 89.99, // Adjust price for Shoe 5
+                image: `img/picture${index + 1}.png`, // Include image URL
+                quantity: 1
+            };
 
-fetchItems();
+            console.log("Adding to cart:", product); // Debugging log
 
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-(() => {
-  const cartCountEl = document.getElementById('cart-count');
-  let cartCount = 0;
+            const existing = cart.find(item => item.id === product.id);
 
-  function updateCartCount() {
-    cartCountEl.textContent = cartCount;
-    const cart = document.querySelector('.cart');
-    cart.setAttribute('aria-label', `Shopping cart with ${cartCount} item${cartCount !== 1 ? 's' : ''}`);
-  }
-  
-  function showAddedAlert(productName) {
-    alert(`Product "${productName}" is toegevoegd aan het winkelmandje.`);
-  }
-  
-  function onAddToCartClick(event) {
-    const product = event.target.closest('.product');
-    if (!product || product.classList.contains('product--not-available')) return;
-    const titleEl = product.querySelector('.product__title');
-    const productName = titleEl ? titleEl.textContent.trim() : 'Product';
-    cartCount++;
-    updateCartCount();
-    showAddedAlert(productName);
-  }
-  
-  function onRemoveFromCartClick(event) {
-    if (cartCount === 0) return;
-    cartCount--;
-    updateCartCount();
-  }
-  
-  document.querySelectorAll('.product__button').forEach(button => {
-    button.addEventListener('click', onAddToCartClick);
-  });
-  document.querySelectorAll('.product__remove-button').forEach(button => {
-    button.addEventListener('click', onRemoveFromCartClick);
-  });
-  
-  updateCartCount();
-})();
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push(product);
+            }
 
+            localStorage.setItem("cart", JSON.stringify(cart));
+            console.log("Cart after addition:", cart); // Debugging log
+            alert(`${product.name} toegevoegd aan winkelwagen!`);
+            updateCartCount();
+        });
+    });
+
+    function updateCartCount() {
+        const cartCount = document.querySelector('.cart-count');
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        cartCount.textContent = totalItems;
+    }
+
+    updateCartCount(); // Initialize cart count on page load
+});

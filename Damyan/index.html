@@ -10,79 +10,103 @@
     <script src="js/main.js" defer></script>
     <title>Wild & Free - Damyan's Shoes</title>
 </head>
-<header>
-    <div class="container">
-        <div class="header-links">
-        <a href="\index.html"><h1 class="title">Wild & Free</h1></a>
-        <a href="/Louella/index.html"><h2 class="link louella">Louella's Clothing</h2></a>
-        <a href="/Casey/index.html"><h2 class="link casey">Casey's Accessories</h2></a>
-        <a href="/Damyan/index.html"><h2 class="link damyan">Damyan's Shoes</h2></a>
-        </div>
-        <div class="bottom-line"></div>
-    </div>
-</header>
+
 <body>
-    <div>
-        <input typ  e="text" placeholder="Search.." name="search">
-    </div>
-
+    <header>
+        <div class="container">
+            <div class="header-links">
+                <a href="\index.html"><h1 class="title">Wild & Free</h1></a>
+                <a href="/Louella/index.html"><h2 class="link louella">Louella's Clothing</h2></a>
+                <a href="/Casey/index.html"><h2 class="link casey">Casey's Accessories</h2></a>
+                <a href="/Damyan/index.html"><h2 class="link damyan">Damyan's Shoes</h2></a>
+                <a href="/Damyan/cart.html" class="cart-link" aria-label="Go to cart">
+                    <div class="cart-container">
+                        <img src="img/cart.svg" alt="Cart" class="cart-icon">
+                        <span class="cart-count">0</span>
+                    </div>
+                </a>
+                <div class="cart-dropdown">
+                    <ul class="cart-items"></ul>
+                    <p class="cart-total">Total: $0.00</p>
+                </div>
+            </div>
+            <div class="bottom-line"></div>
+        </div>
+    </header>
     <section class="items" aria-label="Item list">
-        <article class="item" aria-label="Damyan's Shoes">
-            <img src="img/picture1.png" alt="Damyan's Shoes" class="item-image">
-            <h3 class="item-title">Shoe 1</h3>
-            <p class="item-price">$89.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </article>
+    <article class="item">
+        <a href="product.html?id=1">
+            <img src="img/picture1.png" alt="Shoe 1" class="item-image">
+        </a>
+        <h3 class="item-title">Shoe 1</h3>
+        <p class="item-price">$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </article>
 
-        <article class="item" aria-label="Damyan's Shoes">
-            <img src="img/picture2.png" alt="Damyan's Shoes" class="item-image">
-            <h3 class="item-title">Shoe 2</h3>
-            <p class="item-price">$89.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </article>
+    <article class="item">
+        <a href="product.html?id=2">
+            <img src="img/picture2.png" alt="Shoe 2" class="item-image">
+        </a>
+        <h3 class="item-title">Shoe 2</h3>
+        <p class="item-price">$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </article>
 
-        <article class="item" aria-label="Damyan's Shoes">
-            <img src="img/picture3.png" alt="Damyan's Shoes" class="item-image">
-            <h3 class="item-title">Shoe 3</h3>
-            <p class="item-price">$89.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </article>
+    <article class="item">
+        <a href="product.html?id=3">
+            <img src="img/picture3.png" alt="Shoe 3" class="item-image">
+        </a>
+        <h3 class="item-title">Shoe 3</h3>
+        <p class="item-price">$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </article>
 
-        <article class="item" aria-label="Damyan's Shoes">
-            <img src="img/picture4.png" alt="Damyan's Shoes" class="item-image">
-            <h3 class="item-title">Shoe 4</h3>
-            <p class="item-price">$89.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </article>
+    <article class="item">
+        <a href="product.html?id=4">
+            <img src="img/picture4.png" alt="Shoe 4" class="item-image">
+        </a>
+        <h3 class="item-title">Shoe 4</h3>
+        <p class="item-price">$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </article>
 
-        <article class="item" aria-label="Damyan's Shoes">
-            <img src="img/picture5.png" alt="Damyan's Shoes" class="item-image">
-            <h3 class="item-title">Shoe 5</h3>
-            <p class="item-price">$89.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </article>
+    <article class="item">
+        <a href="product.html?id=5">
+            <img src="img/picture5.png" alt="Shoe 5" class="item-image">
+        </a>
+        <h3 class="item-title">Shoe 5</h3>
+        <p class="item-price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </article>
 
-        <article class="item" aria-label="Damyan's Shoes">
-            <img src="img/picture6.png" alt="Damyan's Shoes" class="item-image">
-            <h3 class="item-title">Shoe 6</h3>
-            <p class="item-price">$89.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </article>
+    <article class="item">
+        <a href="product.html?id=6">
+            <img src="img/picture6.png" alt="Shoe 6" class="item-image">
+        </a>
+        <h3 class="item-title">Shoe 6</h3>
+        <p class="item-price">$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </article>
 
-        <article class="item" aria-label="Damyan's Shoes">
-            <img src="img/picture7.png" alt="Damyan's Shoes" class="item-image">
-            <h3 class="item-title">Shoe 7</h3>
-            <p class="item-price">$89.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </article>
+    <article class="item">
+        <a href="product.html?id=7">
+            <img src="img/picture7.png" alt="Shoe 7" class="item-image">
+        </a>
+        <h3 class="item-title">Shoe 7</h3>
+        <p class="item-price">$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </article>
 
-        <article class="item" aria-label="Damyan's Shoes">
-            <img src="img/picture8.png" alt="Damyan's Shoes" class="item-image">
-            <h3 class="item-title">Shoe 8</h3>
-            <p class="item-price">$89.99</p>
-            <button class="add-to-cart">Add to Cart</button>
-        </article>
-    </section>
+    <article class="item">
+        <a href="product.html?id=8">
+            <img src="img/picture8.png" alt="Shoe 8" class="item-image">
+        </a>
+        <h3 class="item-title">Shoe 8</h3>
+        <p class="item-price">$89.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </article>
+</section>
+
 </body>
 <footer>
         <div class="footer-top">
