@@ -1,0 +1,116 @@
+body {
+    background-color: #3a2e20;
+}
+
+#product-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  padding: 10rem 5rem 5rem 5rem;
+  color: #212a12;
+  background-color: #7b6142;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2rem;
+  line-height: 1.6;
+  border-radius: 2rem;
+}
+
+#product-container a {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #c4d3a5;
+}
+
+#product-container a:hover {
+  border-bottom: 0.15rem solid #bcce99;
+}
+
+.product-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  border: double 0.5rem #613908;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product-title {
+  font-size: 4.5rem;
+  font-family: "Rouge Script", cursive, sans-serif;
+  background: linear-gradient(to right, #778858, #c4d3a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 3rem;
+  color: #dacab2;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.product-detail {
+  font-size: 2.2rem;
+  color: #3a2e20;
+  margin-bottom: 2rem;
+}
+
+.product-description {
+  font-size: 2rem;
+  color: #212a12;
+  margin-bottom: 3rem;
+}
+
+.add-to-cart {
+  background-color: #bcce99;
+  color: #212a12;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #a4b782;
+  border: 0.2rem solid #613908;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  #product-container {
+    flex-direction: column;
+    padding: 8rem 2rem 4rem 2rem;
+  }
+
+  .product-image, .product-info {
+    max-width: 100%;
+  }
+
+  .product-title {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .product-price, .product-detail, .product-description, .add-to-cart {
+    text-align: center;
+    align-self: center;
+  }
+}

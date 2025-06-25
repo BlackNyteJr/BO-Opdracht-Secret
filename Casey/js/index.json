@@ -1,41 +1,64 @@
 {
-    "Cards": [
-        {
-            "title": "Bracelet",
-            "price": 5.00,
-            "detail": "Material: Bronze",
-            "image": "/main/img/bracelet.webp"
-        },
-        {
-            "title": "Bag",
-            "price": 25.00,
-            "detail": "Material: Cotton",
-            "image": "img/bag.jpg"
-        },
-        {
-            "title": "Earrings",
-            "price": 3.00,
-            "detail": "Material: Bronze",
-            "image": "img/earrings.jpg"
-        },
-        {
-            "title": "Necklace",
-            "price": 7.00,
-            "detail": "Material: Bronze",
-            "image": "img/necklace.jpg"
-        },
-        {
-            "title": "Rings",
-            "price": 10.00,
-            "detail": "Material: Silver/Gold",
-            "image": "img/rings.jpg"
-        }, 
-        {
-            "title": "Watch",
-            "price": 20.00,
-            "detail": "Material: Wood/Silver",
-            "image": "img/watch.jpg"
-        }
-        
-    ]
+  "Cards": [
+    {
+      "id": 1,
+      "title": "Bracelet",
+      "category": "Bracelets",
+      "price": 5.00,
+      "detail": "Material: Bronze",
+      "image": "img/bracelet.webp",
+      "color": "#b36b00",
+      "description": "A beautiful bronze bracelet that adds elegance to any outfit."
+    },
+    {
+      "id": 2,
+      "title": "Bag",
+      "category": "Bags",
+      "price": 25.00,
+      "detail": "Material: Cotton",
+      "image": "img/bag.jpg",
+      "color": "#aaa",
+      "description": "A spacious cotton bag perfect for everyday use."
+    },
+    {
+      "id": 3,
+      "title": "Earrings",
+      "category": "Earrings",
+      "price": 3.00,
+      "detail": "Material: Bronze",
+      "image": "img/earrings.jpg",
+      "color": "#b36b00",
+      "description": "Elegant bronze earrings that complement any outfit."  
+    },
+    {
+      "id": 4,
+      "title": "Necklace",
+      "category": "Necklaces",
+      "price": 7.00,
+      "detail": "Material: Bronze",
+      "image": "img/necklace.jpg",
+      "color": "#b36b00",
+      "description": "A stunning bronze necklace that adds a touch of sophistication."
+    },
+    {
+      "id": 5,
+      "title": "Rings",
+      "category": "Rings",
+      "price": 10.00,
+      "detail": "Material: Silver/Gold",
+      "image": "img/rings.jpg",
+      "color": "#ccc",
+      "description": "Elegant rings that add a touch of class to any outfit."
+    },
+    {
+      "id": 6,
+      "title": "Watch",
+      "category": "Watches",
+      "price": 20.00,
+      "detail": "Material: Wood/Silver",
+      "image": "img/watch.jpg",
+      "color": "#aaa",
+      "description": "A stylish watch made from wood and silver."
+    }
+  ]
 }
