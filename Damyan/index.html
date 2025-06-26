@@ -34,79 +34,20 @@
         </div>
     </header>
     <section class="items" aria-label="Item list">
-    <article class="item">
-        <a href="product.html?id=1">
-            <img src="img/picture1.png" alt="Shoe 1" class="item-image">
-        </a>
-        <h3 class="item-title">Shoe 1</h3>
-        <p class="item-price">$89.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </article>
+    <!-- JS will insert items here -->
+    </section>
+    <article class="item" title="${product.description}"></article>
 
-    <article class="item">
-        <a href="product.html?id=2">
-            <img src="img/picture2.png" alt="Shoe 2" class="item-image">
-        </a>
-        <h3 class="item-title">Shoe 2</h3>
-        <p class="item-price">$89.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </article>
-
-    <article class="item">
-        <a href="product.html?id=3">
-            <img src="img/picture3.png" alt="Shoe 3" class="item-image">
-        </a>
-        <h3 class="item-title">Shoe 3</h3>
-        <p class="item-price">$89.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </article>
-
-    <article class="item">
-        <a href="product.html?id=4">
-            <img src="img/picture4.png" alt="Shoe 4" class="item-image">
-        </a>
-        <h3 class="item-title">Shoe 4</h3>
-        <p class="item-price">$89.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </article>
-
-    <article class="item">
-        <a href="product.html?id=5">
-            <img src="img/picture5.png" alt="Shoe 5" class="item-image">
-        </a>
-        <h3 class="item-title">Shoe 5</h3>
-        <p class="item-price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </article>
-
-    <article class="item">
-        <a href="product.html?id=6">
-            <img src="img/picture6.png" alt="Shoe 6" class="item-image">
-        </a>
-        <h3 class="item-title">Shoe 6</h3>
-        <p class="item-price">$89.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </article>
-
-    <article class="item">
-        <a href="product.html?id=7">
-            <img src="img/picture7.png" alt="Shoe 7" class="item-image">
-        </a>
-        <h3 class="item-title">Shoe 7</h3>
-        <p class="item-price">$89.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </article>
-
-    <article class="item">
-        <a href="product.html?id=8">
-            <img src="img/picture8.png" alt="Shoe 8" class="item-image">
-        </a>
-        <h3 class="item-title">Shoe 8</h3>
-        <p class="item-price">$89.99</p>
-        <button class="add-to-cart">Add to Cart</button>
-    </article>
-</section>
-
+    <div id="quick-view-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+            <button id="modal-add-to-cart">Add to Cart</button>
+        </div>
+    </div>
 </body>
 <footer>
         <div class="footer-top">

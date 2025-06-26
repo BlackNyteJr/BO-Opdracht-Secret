@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Shoe 1",
+    "price": 89.99,
+    "image": "img/picture1.png",
+    "description": "A sleek and modern running shoe for everyday comfort."
+  },
+  {
+    "id": 2,
+    "name": "Shoe 2",
+    "price": 89.99,
+    "image": "img/picture2.png",
+    "description": "Built for trail adventures with extra grip and durability."
+  },
+  {
+    "id": 3,
+    "name": "Shoe 3",
+    "price": 89.99,
+    "image": "img/picture3.png",
+    "description": "A classic sneaker that combines style and comfort."
+  },
+  {
+    "id": 4,
+    "name": "Shoe 4",
+    "price": 89.99,
+    "image": "img/picture4.png",
+    "description": "Lightweight and breathable, perfect for summer runs."
+  },
+  {
+    "id": 5,
+    "name": "Shoe 5",
+    "price": 89.99,
+    "image": "img/picture5.png",
+    "description": "A versatile shoe suitable for both gym and casual wear."
+  },
+  {
+    "id": 6,
+    "name": "Shoe 6",
+    "price": 89.99,
+    "image": "img/picture6.png",
+    "description": "A stylish shoe with a retro vibe, great for everyday use."
+  },
+  {
+    "id": 7,
+    "name": "Shoe 7",
+    "price": 89.99,
+    "image": "img/picture7.png",
+    "description": "Designed for performance, ideal for serious runners."
+  },
+  {
+    "id": 8,
+    "name": "Shoe 8",
+    "price": 89.99,
+    "image": "img/picture8.png",
+    "description": "A fashionable shoe that pairs well with any outfit."
+  }
+]

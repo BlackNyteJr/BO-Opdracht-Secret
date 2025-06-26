@@ -1,34 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll(".add-to-cart");
+    const itemsContainer = document.querySelector('.items');
 
-    buttons.forEach((btn, index) => {
-        btn.addEventListener("click", () => {
-            const product = {
-                id: index + 1,
-                name: `Shoe ${index + 1}`,
-                price: index === 4 ? 99.99 : 89.99, // Adjust price for Shoe 5
-                image: `img/picture${index + 1}.png`, // Include image URL
-                quantity: 1
-            };
+    fetch('js/product.json') // or 'product.json' if it's in the root
+        .then(res => res.json())
+        .then(products => {
+            products.forEach(product => {
+                const article = document.createElement('article');
+                article.className = 'item';
+                article.innerHTML = `
+                    <a href="product.html?id=${product.id}">
+                        <img src="${product.image}" alt="${product.name}" class="item-image">
+                    </a>
+                    <h3 class="item-title">${product.name}</h3>
+                    <p class="item-price">$${product.price.toFixed(2)}</p>
+                    <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+                `;
+article.title = product.description;
 
-            console.log("Adding to cart:", product); // Debugging log
+                itemsContainer.appendChild(article);
+            });
 
-            let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-            const existing = cart.find(item => item.id === product.id);
-
-            if (existing) {
-                existing.quantity += 1;
-            } else {
-                cart.push(product);
-            }
-
-            localStorage.setItem("cart", JSON.stringify(cart));
-            console.log("Cart after addition:", cart); // Debugging log
-            alert(`${product.name} toegevoegd aan winkelwagen!`);
+            setupCartButtons(products); // Enable cart functionality
             updateCartCount();
+        })
+        .catch(err => {
+            console.error('Error loading products:', err);
+            itemsContainer.innerHTML = '<p>Failed to load products.</p>';
         });
-    });
+
+    function setupCartButtons(products) {
+        const buttons = document.querySelectorAll(".add-to-cart");
+
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const id = parseInt(btn.getAttribute("data-id"));
+                const product = products.find(p => p.id === id);
+                if (!product) return;
+
+                const productToAdd = { ...product, quantity: 1 };
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const existing = cart.find(item => item.id === product.id);
+
+                if (existing) {
+                    existing.quantity += 1;
+                } else {
+                    cart.push(productToAdd);
+                }
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert(`${product.name} toegevoegd aan winkelwagen!`);
+                updateCartCount();
+            });
+        });
+    }
 
     function updateCartCount() {
         const cartCount = document.querySelector('.cart-count');
@@ -36,6 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
         cartCount.textContent = totalItems;
     }
-
-    updateCartCount(); // Initialize cart count on page load
 });
+
+// Show popup message
+function showPopup(message) {
+  const popup = document.getElementById("popup");
+  popup.textContent = message;
+  popup.classList.add("show");
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 2500);
+}

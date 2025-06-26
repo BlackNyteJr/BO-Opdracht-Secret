@@ -1,50 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cartCount = document.querySelector('.cart-count');
-    const cartItemsContainer = document.getElementById('cart-items-container');
-    const cartTotal = document.getElementById('cart-total');
-    const cartEmptyMessage = document.getElementById('cart-empty-message');
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("cart-container");
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    function loadCart() {
-       console.log("Loading cart..."); // Debugging log
-       const cart = JSON.parse(localStorage.getItem('cart')) || [];
-       updateCartUI(cart);
-    }
-   
-    function updateCartUI(cart) {
-        // Update badge
-        let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCount.textContent = totalItems;
-
-        // Clear previous items
-        cartItemsContainer.innerHTML = '';
-        let total = 0;
-
-        if (cart.length === 0) {
-            cartEmptyMessage.style.display = 'block'; // Show empty message
-            cartTotal.textContent = '';
-        } else {
-            cartEmptyMessage.style.display = 'none'; // Hide empty message
-            cart.forEach(item => {
-                // Create card for each item
-                const card = document.createElement('div');
-                card.className = 'item'; // Use the same class as in your items section
-                card.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" class="item-image">
-                    <h3 class="item-title">${item.name}</h3>
-                    <p class="item-price">$${item.price.toFixed(2)}</p>
-                    <p>Quantity: ${item.quantity}</p>
-                `;
-                cartItemsContainer.appendChild(card);
-                total += item.price * item.quantity;
-            });
-            cartTotal.textContent = `Total: $${total.toFixed(2)}`;
-        }
+    if (cart.length === 0) {
+        container.innerHTML = "<p>Je winkelwagen is leeg.</p>";
+        return;
     }
 
-    document.getElementById('clear-cart').addEventListener('click', () => {
-        localStorage.removeItem('cart');
-        updateCartUI([]); // Update UI to reflect empty cart
+    let total = 0;
+
+    const html = cart.map(item => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        return `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.name}" class="cart-image">
+                <div>
+                    <h3>${item.name}</h3>
+                    <p>Prijs: $${item.price.toFixed(2)}</p>
+                    <p>Aantal: ${item.quantity}</p>
+                    <p>Subtotaal: $${itemTotal.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+    }).join("");
+
+    container.innerHTML = `
+        ${html}
+        <hr>
+        <h2>Totaal: $${total.toFixed(2)}</h2>
+        <button id="clear-cart">Winkelwagen legen</button>
+    `;
+
+    document.getElementById("clear-cart").addEventListener("click", () => {
+        localStorage.removeItem("cart");
+        location.reload();
     });
-
-    loadCart(); // Load cart on page load
 });

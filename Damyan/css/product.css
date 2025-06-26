@@ -1,0 +1,42 @@
+body {
+  background-color: #3a6e43; /* Match the background color */
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Match the font */
+  font-size: 3rem; /* Match the font size */
+  padding: 2rem; /* Add padding for spacing */
+  color: #c4d3a5; /* Match the text color */
+}
+#product-container {
+  background-color: #c4d3a5; /* Background color for product details */
+  border-radius: 1rem; /* Rounded corners */
+  padding: 2rem; /* Padding for spacing */
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2); /* Shadow effect */
+  max-width: 600px; /* Limit the width */
+  margin: auto; /* Center the container */
+}
+img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 1rem; /* Rounded corners for images */
+}
+h1 {
+  font-size: 4rem; /* Title size */
+  margin-bottom: 1rem; /* Space below title */
+}
+p {
+  font-size: 2rem; /* Paragraph size */
+  margin: 1rem 0; /* Space above and below paragraphs */
+  line-height: 1.5; /* Improve readability */
+}
+button {
+  background-color: #3a6e43; /* Match button color */
+  color: #fff; /* Button text color */
+  border: none; /* No border */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Padding for button */
+  font-size: 1.5rem; /* Button text size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+button:hover {
+  background-color: #2a4e33; /* Darker shade on hover */
+}
