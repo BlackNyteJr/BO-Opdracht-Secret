@@ -32,7 +32,20 @@
             </div>
             <div class="bottom-line"></div>
         </div>
+        <button id="theme-toggle" aria-label="Toggle dark mode">Dark Mode</button>
     </header>
+    <div class="controls-bar">
+        <div class="sort-controls">
+          <label for="sort">Sort by:</label>
+          <select id="sort">
+            <option value="default">Default</option>
+            <option value="name-asc">Name (A → Z)</option>
+            <option value="name-desc">Name (Z → A)</option>
+            <option value="price-asc">Price (Low → High)</option>
+            <option value="price-desc">Price (High → Low)</option>
+          </select>
+        </div>
+    </div>
     <section class="items" aria-label="Item list">
     <!-- JS will insert items here -->
     </section>
@@ -47,6 +60,12 @@
             <p id="modal-price"></p>
             <button id="modal-add-to-cart">Add to Cart</button>
         </div>
+    </div>
+    <div id="cart-modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <p id="modal-message">Product added to cart!</p>
+      </div>
     </div>
 </body>
 <footer>

@@ -1,74 +1,104 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const itemsContainer = document.querySelector('.items');
+document.addEventListener("DOMContentLoaded", () => {
+  const itemContainer = document.querySelector(".items");
+  const sortSelect = document.getElementById("sort");
+  let products = [];
 
-    fetch('js/product.json') // or 'product.json' if it's in the root
-        .then(res => res.json())
-        .then(products => {
-            products.forEach(product => {
-                const article = document.createElement('article');
-                article.className = 'item';
-                article.innerHTML = `
-                    <a href="product.html?id=${product.id}">
-                        <img src="${product.image}" alt="${product.name}" class="item-image">
-                    </a>
-                    <h3 class="item-title">${product.name}</h3>
-                    <p class="item-price">$${product.price.toFixed(2)}</p>
-                    <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
-                `;
-article.title = product.description;
+  // Fetch products from JSON
+  fetch("js/product.json")
+    .then(res => res.json())
+    .then(data => {
+      products = data;
+      renderProducts(products);
+    });
 
-                itemsContainer.appendChild(article);
-            });
+  function renderProducts(items) {
+    itemContainer.innerHTML = ""; // clear current items
 
-            setupCartButtons(products); // Enable cart functionality
-            updateCartCount();
-        })
-        .catch(err => {
-            console.error('Error loading products:', err);
-            itemsContainer.innerHTML = '<p>Failed to load products.</p>';
-        });
+    items.forEach(product => {
+      const article = document.createElement("article");
+      article.classList.add("item");
 
-    function setupCartButtons(products) {
-        const buttons = document.querySelectorAll(".add-to-cart");
+      article.innerHTML = `
+        <a href="product.html?id=${product.id}">
+            <img src="${product.image}" alt="${product.name}" class="item-image">
+        </a>
+        <h3 class="item-title">${product.name}</h3>
+        <p class="item-price">$${product.price.toFixed(2)}</p>
+        <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
+      `;
 
-        buttons.forEach(btn => {
-            btn.addEventListener("click", () => {
-                const id = parseInt(btn.getAttribute("data-id"));
-                const product = products.find(p => p.id === id);
-                if (!product) return;
+      itemContainer.appendChild(article);
+    });
 
-                const productToAdd = { ...product, quantity: 1 };
-                let cart = JSON.parse(localStorage.getItem("cart")) || [];
-                const existing = cart.find(item => item.id === product.id);
+    setupCartButtons();
+  }
 
-                if (existing) {
-                    existing.quantity += 1;
-                } else {
-                    cart.push(productToAdd);
-                }
+  function setupCartButtons() {
+    const buttons = document.querySelectorAll(".add-to-cart");
 
-                localStorage.setItem("cart", JSON.stringify(cart));
-                alert(`${product.name} toegevoegd aan winkelwagen!`);
-                updateCartCount();
-            });
-        });
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const productId = parseInt(button.dataset.id);
+        const product = products.find(p => p.id === productId);
+        if (!product) return;
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const existing = cart.find(item => item.id === product.id);
+        if (existing) {
+          existing.quantity += 1;
+        } else {
+          cart.push({ ...product, quantity: 1 });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        showModal(`${product.name} toegevoegd aan winkelwagen!`);
+      });
+    });
+  }
+
+  sortSelect.addEventListener("change", () => {
+    const value = sortSelect.value;
+    let sorted = [...products];
+
+    if (value === "name-asc") {
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (value === "name-desc") {
+      sorted.sort((a, b) => b.name.localeCompare(a.name));
+    } else if (value === "price-asc") {
+      sorted.sort((a, b) => a.price - b.price);
+    } else if (value === "price-desc") {
+      sorted.sort((a, b) => b.price - a.price);
     }
 
-    function updateCartCount() {
-        const cartCount = document.querySelector('.cart-count');
-        const cart = JSON.parse(localStorage.getItem("cart")) || [];
-        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-        cartCount.textContent = totalItems;
-    }
+    renderProducts(sorted);
+  });
+
+  function updateCartCount() {
+    const cartCount = document.querySelector('.cart-count');
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCount.textContent = totalItems;
+  }
+
+  updateCartCount(); // Init on load
 });
 
-// Show popup message
-function showPopup(message) {
-  const popup = document.getElementById("popup");
-  popup.textContent = message;
-  popup.classList.add("show");
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("theme-toggle");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const savedTheme = localStorage.getItem("theme");
 
-  setTimeout(() => {
-    popup.classList.remove("show");
-  }, 2500);
-}
+  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+    document.body.classList.add("dark-mode");
+    themeToggle.textContent = "Light Mode";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    themeToggle.textContent = isDark ? "Light Mode" : "Dark Mode";
+  });
+});
+

@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cart-page {
+  background-color: #3a6e43;
+  color: #c4d3a5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 4rem;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.cart-container {
+  max-width: 900px;
+  margin: auto;
+  background-color: #c4d3a5;
+  color: #3a6e43;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 1rem;
+}
+
+.cart-item img {
+  width: 120px;
+  border-radius: 1rem;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-details h3 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.cart-item-details p {
+  margin: 0.5rem 0;
+}
+
+.cart-summary {
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 1.8rem;
+}
+
+#checkout-btn {
+  background-color: #3a6e43;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+  background-color: #2a4e33;
+}
+
+#empty-cart-btn {
+  background-color: #a54444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#empty-cart-btn:hover {
+  background-color: #812d2d;
+}
+
+.remove-item-btn {
+  background-color: #a54444;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.remove-item-btn:hover {
+  background-color: #812d2d;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+}
+
+body.dark-mode #product-container,
+body.dark-mode .sort-controls select {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+body.dark-mode button {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+body.dark-mode button:hover {
+  background-color: #666;
+}
+
+/* Toggle Button Styling */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #c4d3a5;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+body.dark-mode #theme-toggle {
+  color: #f0f0f0;
+}
+
+body.dark-mode .cart-page {
+  background-color: #000000;
+  color: #444;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 4rem;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+body.dark-mode .cart-container {
+  max-width: 900px;
+  margin: auto;
+  background-color: #444;
+  color: #000000;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+}

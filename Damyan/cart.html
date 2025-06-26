@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Your Cart</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/cart.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart - Wild & Free</title>
+  <link rel="stylesheet" href="css/cart.css" />
+  <script src="js/cart.js" defer></script>
 </head>
 <body>
-    <main>
-        <h1>Winkelwagen</h1>
-        <div id="cart-container"></div>
-    </main>
+  <main class="cart-page" aria-label="Shopping Cart">
+    <div class="cart-container">
+      <h1>Your Shopping Cart</h1>
+      <div id="cart-items"></div>
+        <div class="cart-summary">
+          <p id="total-price">Total: $0.00</p>
+          <button id="checkout-btn">Proceed to Checkout</button>
+          <button id="empty-cart-btn">Empty Cart</button>
+        </div>
+
+    </div>
+  </main>
 </body>
 </html>
