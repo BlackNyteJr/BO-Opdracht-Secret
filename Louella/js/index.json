@@ -1,48 +1,98 @@
 {
-    "cards": [
-        {
+
+    "cards":
+        [
+            {
+                
+            "id": "brown-sweater",
             "title": "brown sweater",
             "price": 15,
-            "details": "cotton"
-        },
-        {
-            "title": "brown vest",
-            "price": 13,
-            "details": "polyester"
-        },
-        {
-            "title": "hippie pants",
-            "price": 21,
-            "details": "polyester"
-        },
-        {
-            "title": "cargo pants",
-            "price": 17,
-            "details": "denim"
-        },
-        {
-            "title": "hippie pants",
-            "price": 23,
-            "details": "cotton"
-        },
-        {
-            "title": "green sweater",
-            "price": 18,
+            "color": "#778858",
+            "category": "sweaters",
+            "desc": "cotton sweater loose fit",
+            "img": "/Louella/images/brown-sweater.png",
             "details": "wool"
         },
-        {
-            "title": "brown jacket",
-            "price": 29,
-            "details": "denim"
+        {   
+            "id": "brown-vest",
+            "title": "brown vest",
+            "price": 13,
+            "color": "#778858",
+            "category": "vests",
+            "desc": "brown polyester vest with nice buttonups",
+            "img": "/Louella/images/brown-vest.png",
+            "details": "cotton"
+
         },
-        {
-            "title": "blue shirt",
-            "price": 11,
+        {   
+            "id": "hippie-pants",
+            "title": "hippie pants",
+            "price": 21,
+            "color": "#778858",
+            "category": "pants",
+            "desc": "colorful polyester hippie pants with sewn on patches",
+            "img": "/Louella/images/colord-pants.png",
             "details": "polyester"
         },
-        {
+        {   
+            "id": "cargo-pants",
+            "title": "cargo pants",
+            "price": 17,
+            "color": "#778858",
+            "category": "pants",
+            "desc": " dark green denim cargo pants with multiple pockets",
+            "img": "/Louella/images/green-cargo.png",
+            "details": "denim"
+
+        },
+        {   
+            "id": "green-hippie-pants",
+            "title": "hippie pants",
+            "price": 23,
+            "color": "#778858",
+            "category": "pants",
+            "desc": "dark green hippie pants with sewn on patches",
+            "img": "/Louella/images/green-pants.png",
+            "details": "polyester"
+        },
+        {   
+            "id": "green-sweater",
+            "title": "green sweater",
+            "price": 18,
+            "color": "#778858",
+            "category": "sweaters",
+            "desc": "nice woolen sweater with green patterns on it",
+            "img": "/Louella/images/green-sweater.png",
+            "details": "wool"
+        },
+        {   
+            "id": "brown-jacket",
+            "title": "brown jacket",
+            "price": 29,
+            "color": "#778858",
+            "category": "jackets",
+            "desc": "denim jacket with big pockets and a warm undercoat",
+            "img": "/Louella/images/brown-jacket.png",
+            "details": "denim"
+        },
+        {   
+            "id": "blue-shirt",
+            "title": "blue shirt",
+            "price": 11,
+            "color": "#778858",
+            "category": "shirts",
+            "desc": "polyester blue shirt with skull print on it",
+            "img": "/Louella/images/blue-shirt.png",
+            "details": "polyester"
+        },
+        {   
+            "id": "blue-jacket",
             "title": "blue jacket",
             "price": 22,
+            "color": "#778858",
+            "category": "jackets",
+            "desc": "polyester blue jacket with a inside pocket",
+            "img": "/Louella/images/blue-jacket.png",
             "details": "polyester"
         }
     ]
